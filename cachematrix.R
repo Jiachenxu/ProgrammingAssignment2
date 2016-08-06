@@ -45,10 +45,6 @@ cacheSolve <- function(x, ...) {
   i
 }
 
-
-
-
-
 > ## an example for this two function
 > a=makeCacheMatrix(matrix(c(60,0,0,0,90,0,0,0,150),3,3))
 > a$get()
@@ -69,3 +65,4 @@ getting cached data
 [1,] 0.01666667 0.00000000 0.000000000
 [2,] 0.00000000 0.01111111 0.000000000
 [3,] 0.00000000 0.00000000 0.006666667
+
