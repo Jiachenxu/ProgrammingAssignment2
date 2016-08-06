@@ -27,6 +27,28 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
+
+> ## an example for this two function
+> a=makeCacheMatrix(matrix(c(60,0,0,0,90,0,0,0,150),3,3))
+> a$get()
+     [,1] [,2] [,3]
+[1,]   60    0    0
+[2,]    0   90    0
+[3,]    0    0  150
+> a$getinverse()
+NULL
+> cacheSolve(a)
+           [,1]       [,2]        [,3]
+[1,] 0.01666667 0.00000000 0.000000000
+[2,] 0.00000000 0.01111111 0.000000000
+[3,] 0.00000000 0.00000000 0.006666667
+> cacheSolve(a)
+getting cached data
+           [,1]       [,2]        [,3]
+[1,] 0.01666667 0.00000000 0.000000000
+[2,] 0.00000000 0.01111111 0.000000000
+[3,] 0.00000000 0.00000000 0.006666667
+
 ## cacheSolve: This function computes the inverse of the
 ## special "matrix" returned by makeCacheMatrix above. If
 ## the inverse has already been calculated (and the matrix
